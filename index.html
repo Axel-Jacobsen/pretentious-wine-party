@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="shortcut icon" type="image/jpeg" href="favicon"/>
 
-    <title> The Straussian Moment </Title>
+    <title>You are loved.</Title>
   </head>
 
   <body class="content">
@@ -16,8 +16,15 @@
     <h2>We hope you will join us.</h2>
 
     <div id="darkmode-toggle" onclick="darkmode_toggle()">
-      <i id="darkmode-toggle-text">dark</i>
+      <i id="darkmode-toggle-text">I prefer the dark</i>
     </div>
+
+    <h2 id="rules"><i>Rules</i></h2>
+    <ul class="essay">
+      <li>The dress code will be business casual - buttoned or polo shirt, dress pants, pant suits, e.t.c.</li>
+      <li>Each member is expected to bring a bottle of wine, of no greater value than $20 - gems in the rough are preferred</li>
+      <li>We will all share wine with everyone, and you shall not try more than a glass of your own wine</li>
+    </ul>
 
 
   </body>
@@ -25,7 +32,7 @@
   <script>
     const darkmode_toggle = () => {
       let init_val = document.getElementById("darkmode-toggle-text").textContent
-      let new_val = init_val == "dark" ? "light" : "dark"
+      let new_val = init_val == "I prefer the dark" ? "I prefer the light" : "I prefer the dark"
 
       document.body.classList.toggle("dark-mode")
       document.getElementById("darkmode-toggle-text").textContent = new_val
