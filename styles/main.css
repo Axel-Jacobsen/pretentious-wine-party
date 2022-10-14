@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;1,300&display=swap");
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  background-color: rgb(240, 240, 240);
+  font-family: "Crimson Pro";
+  padding-top: 25px;
+}
+
+a {
+  color: #333;
+  border-bottom: 0;
+  text-decoration: none;
+  display: inline;
+}
+
+.dark-mode {
+  background-color: black;
+  color: #BBB;
+}
+
+#darkmode-toggle {
+  cursor: pointer;
+  justify-self: left;
+}
+
+.name {
+  font-family: "Crimson Pro";
+  font-size: 48px;
+}
+
+.poem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.essay, .quote {
+  width: 65%;
+  max-width: 850px;
+  border-bottom: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+  text-justify: inter-character;
+}
+.essay i, .quote i {
+  white-space: nowrap;
+}
+
+.quote {
+  width: 50%;
+  max-width: 654px;
+}
+
+/*# sourceMappingURL=main.css.map */
