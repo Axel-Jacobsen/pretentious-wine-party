@@ -21,27 +21,44 @@
 
     <h2 id="rules"><i>Rules</i></h2>
     <ul class="essay">
-      <li>The dress code will be business casual - buttoned or polo shirt, dress pants, pant suits, e.t.c.</li>
-      <li>Each member is expected to bring a bottle of wine, of no greater value than $20 - gems in the rough are preferred</li>
+      <li>The dress code will be business casual - buttoned or polo shirt, dress pants, dresses, e.t.c.</li>
+      <li>You should bring a bottle of wine, of no greater value than $20 - gems in the rough are preferred</li>
       <li>We will all share wine with everyone, and you shall not try more than a glass of your own wine</li>
+      <li>Be sure to have eaten dinner beforehand</li>
     </ul>
 
 
   </body>
 
   <script>
-    const darkmode_toggle = () => {
-      let init_val = document.getElementById("darkmode-toggle-text").textContent
-      let new_val = init_val == "I prefer the dark" ? "I prefer the light" : "I prefer the dark"
+    const randInt = max => Math.floor(Math.random() * max)
 
-      document.body.classList.toggle("dark-mode")
-      document.getElementById("darkmode-toggle-text").textContent = new_val
+    const darkmode_toggle = () => {
+      let opts = ["I prefer the dark", "I prefer color", "I prefer the light"]
+
+      let init_val = document.getElementById("darkmode-toggle-text").textContent
+      let current_val = opts.indexOf(init_val)
+      let next_val = 1 + current_val == opts.length ? 0 : 1 + current_val
+
+      if (next_val == 0) {
+        document.body.style.backgroundColor = ""
+        document.body.style.color = ""
+      } else if (next_val == 1) {
+        document.body.style.backgroundColor = "#000"
+        document.body.style.color = "#BBB"
+      } else if (next_val == 2) {
+        let [r, g, b] = [randInt(255), randInt(255), randInt(255)]
+        document.body.style.backgroundColor = `rgb(${r},${g},${b})`
+        document.body.style.color = r * 0.299 + g * 0.587 + b * 0.114 > 186 ? "#222" : "#EEE"
+      }
+      document.getElementById("darkmode-toggle-text").textContent = opts[next_val]
     }
 
     let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (dark) {
       darkmode_toggle()
     }
+
   </script>
 
 </html>
