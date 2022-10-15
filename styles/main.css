@@ -21,7 +21,6 @@ a {
 }
 
 #rules {
-  margin-top: 4rem;
   margin-bottom: 0rem;
   width: 65%;
   max-width: 850px;
@@ -29,8 +28,12 @@ a {
 }
 
 #darkmode-toggle {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   cursor: pointer;
   justify-self: left;
+  border: 1px solid;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
 }
 
 .name {
