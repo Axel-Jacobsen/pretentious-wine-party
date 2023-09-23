@@ -15,18 +15,17 @@
 
     <h2>We hope you will join us.</h2>
 
-    <div id="darkmode-toggle" onclick="darkmode_toggle()">
+    <div id="darkmode-toggle" onclick="colour_toggle()">
       <i id="darkmode-toggle-text">I prefer the dark</i>
     </div>
 
     <h2 id="rules"><i>Rules</i></h2>
     <ul class="essay">
-      <li>Be dressed for an evening on the beach (with a little accoutrement)</li>
+      <li>Be dressed to impress - collared shirts, dress pants, dresses, e.t.c.</li>
       <li>You must each bring a bottle of wine, of no greater value than $20 - gems in the rough are preferred</li>
       <li>We will all share wine with everyone, and you shall not try more than a glass of your own wine</li>
       <li>Be sure to have eaten dinner beforehand</li>
       <li>Please do not be late</li>
-      <li>If you have a portable table (e.g. folding table), please let the hosts know as soon as possible</li>
     </ul>
 
     See you there! We love you.
@@ -36,7 +35,7 @@
   <script>
     const randInt = max => Math.floor(Math.random() * max)
 
-    const darkmode_toggle = () => {
+    const colour_toggle = () => {
       let opts = ["I prefer the dark", "I prefer colour", "I prefer the light"]
 
       let init_val = document.getElementById("darkmode-toggle-text").textContent
@@ -64,7 +63,7 @@
 
     let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (dark) {
-      darkmode_toggle()
+      colour_toggle()
     }
 
   </script>
